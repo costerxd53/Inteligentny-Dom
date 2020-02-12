@@ -2,7 +2,7 @@
     var ip = "http://10.0.1.198:8694";
 var wifi = document.getElementById("wifi");
 var lte = document.getElementById("lte");
-
+var start = "";
 wifi.addEventListener("click", continue_wifi, false);
 lte.addEventListener("click", continue_lte, false);
 
@@ -11,13 +11,15 @@ function continue_wifi() {
  ip = "http://10.0.1.198:8694";
   document.getElementById('wyp').style = "display: visible";
   document.getElementById('pre').style = "display: none";
+continue_fun();
 }
 function continue_lte() {
  ip = "http://77.252.137.224:8694";
   document.getElementById('wyp').style = "display: visible";
     document.getElementById('pre').style = "display: none";
+    continue_fun();
 }
-
+function continue_fun() {
 
 var switch_1 = document.getElementById("switch_2");
 var switch_2 = document.getElementById("switch_1");
@@ -246,4 +248,5 @@ function switch_off_3() {
       switch_3.style.background = "white";
     }
   });
+}
 }
